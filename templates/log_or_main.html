@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h1>Welcome Dear {% if logged_in %} {{username}}{% else %} User!{% endif %}</h1>
+    <br>
+    <hr>
+        <br>
+    {% if logged_in %}You are logged in.{% elif not logged_in %} You are not logged in!{% endif %}
+    <br>
+    <br>
+    <button><a href="/login">Log in</a></button>
+    <br>
+    <br>
+    <button><a href="/test/0/0">Test</a></button>
+    <br>
+    <br>
+    <button><a href="/logout">Log out</a></button>
+
+
+</body>
+</html>

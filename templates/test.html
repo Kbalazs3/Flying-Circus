@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English Test</title>
+</head>
+<body>
+    <h1>Welcome to the Test!</h1>
+    <br>
+    <hr>
+    <br>
+    {% set id=id + 1 %}
+    <h2>{{id}}. Question</h2>
+<br>
+    {% if id < max %}
+    {{question}}
+    <br>
+    <br>
+        <form action="/test/{{id}}/{{result}}" method="post">
+
+    {% elif id == max %}}
+        <form action="/result/{{result}}">
+            {% endif %}
+            {% for key, value in answers.items()%}
+        <input type="radio" name="answer" id="answer" value="{{value}}">
+        <label for="answer">{{key}}</label><br>{% endfor %}
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
